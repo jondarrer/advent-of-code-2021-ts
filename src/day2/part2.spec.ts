@@ -1,14 +1,15 @@
-import part2, { somethingElse } from './part2';
+import part2 from './part2';
 
 describe('day2/part2', () => {
   it('should work out the result', () => {
-    const input = [];
-    expect(part2(input)).toEqual(0);
-  });
-});
-describe('day2/somethingElse', () => {
-  it('should work out something', () => {
-    const input = 0;
-    expect(somethingElse(input)).toEqual(0);
+    const input = [
+      { direction: 'forward', quantity: 5 },
+      { direction: 'down', quantity: 5 },
+      { direction: 'forward', quantity: 8 },
+      { direction: 'up', quantity: 3 },
+      { direction: 'down', quantity: 8 },
+      { direction: 'forward', quantity: 2 },
+    ];
+    expect(part2(input)).toEqual(900);
   });
 });
